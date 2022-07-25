@@ -1,0 +1,12 @@
+﻿
+32 bit system:
+
+regsvr32 "%SystemRoot%\System32\actxprxy.dll"
+regsvr32 "%ProgramFiles%\Internet Explorer\ieproxy.dll"
+
+64 bit system:
+
+regsvr32 "%WinDir%\SysWOW64\actxprxy.dll"
+regsvr32 "%ProgramFiles(x86)%\Internet Explorer\ieproxy.dll"
+
+

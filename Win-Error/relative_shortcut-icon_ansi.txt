@@ -1,0 +1,8 @@
+
+%windir%\system32\RunDll32.exe shell32.dll,ShellExec_RunDLL .\copy-paste_v-1.1\copypaste_v-1.1.exe
+
+%windir%\system32\cmd.exe /C start /B /D .\copy-paste_v-1.1 .\copy-paste_v-1.1\copypaste_v-1.1.exe
+
+%windir%\explorer.exe ".\copy-paste_v-1.1\copypaste_v-1.1.exe"
+
+

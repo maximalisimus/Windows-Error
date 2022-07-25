@@ -1,0 +1,42 @@
+﻿
+services.msc
+
+1. Войдите в меню «Пуск» и щелкните на пункте «Выполнить...» Если у вас в меню «Пуск» отсутствует пункт «Выполнить...», включите его, для чего щелкните правой кнопкой мыши на Панели задач, выберите в контекстном меню пункт «Свойства», затем вкладку «Меню «Пуск», в ней щелкните на кнопку «Настроить...» и установите флажок «Команда «Выполнить» в списке настроек Меню «Пуск».
+2. В командной строке окошка «Выполнить» введите следующую команду – regsvr32 "%SystemRoot%\System32\actxprxy.dll" и выполните ее, щелкнув на кнопку ОК.
+3. Войдите в меню «Пуск» – «Выполнить...» повторно, введите другую команду – regsvr32 "%ProgramFiles%\Internet Explorer\ieproxy.dll" и выполните ее щелчком на кнопке ОК.
+4. Перезагрузите компьютер.
+
+
+sfc /scannow
+
+
+
+regsvr32 "%WinDir%\SysWOW64\actxprxy.dll"
+regsvr32 "%ProgramFiles(x86)%\Internet Explorer\ieproxy.dll"
+
+printui /s /t2
+
+
+C:\Windows\System32\spool\PRINTERS
+
+
+
+
+
+Если удаления ПО не происходит (появляется ошибка), надо открыть реестр Windows и перейти по адресу:
+Читайте также: Как открыть реестр в Windows 7
+
+Для Windows 64-бит – HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Print Processors
+Для Windows 32-бит – HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Print Processors
+Здесь нужно удалить всё имеющееся содержимое каталогов.
+
+Далее опять вызовите окно «Выполнить», в котором введите printmanagement.msc
+
+
+
+
+
+
+
+
+

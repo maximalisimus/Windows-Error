@@ -1,0 +1,17 @@
+﻿
+slmgr.vbs /upk 
+slmgr.vbs /cpky
+
+slmgr /upk
+slmgr /cpky
+slmgr /rearm
+
+cd C:\Program Files\Microsoft Office\Office16
+cscript ospp.vbs /rearm
+C:\Program Files\Microsoft Office\Office15
+C:\Program Files (x86)\Microsoft Office\Office15
+cscript ospp.vbs /dstatus
+cscript ospp.vbs /unpkey: последние 5 символов product key
+
+
+

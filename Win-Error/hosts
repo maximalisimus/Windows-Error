@@ -1,0 +1,220 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+88.221.144.73    searchguide.level3.com
+	185.43.220.23    loveread.ec
+
+74.125.136.113    support.google.com
+	74.125.136.94    fonts.gstatic.com
+	74.125.136.113    apis.google.com
+	74.125.136.91    youtube.com
+	74.125.136.132    yt3.ggpht.com
+	74.125.136.84    accounts.google.com
+	74.125.136.138    i.ytimg.com
+	74.125.136.155    pubads.g.doubleclick.net
+	74.125.136.139    plus.google.com
+	74.125.136.115    checkout.google.com
+	192.150.16.58    get.adobe.com
+	74.125.136.190    www.youtube.com
+	74.125.136.149    ad.doubleclick.net
+	74.125.136.155    pagead2.googlesyndication.com
+	74.125.136.94    www.google.nl
+	74.125.136.101    m.youtube.com
+	74.125.136.138    s.ytimg.com
+	37.48.116.210 	 audioknigi-online.com
+	178.236.137.57    seasonvar.ru
+	104.31.86.70 	 tushkan.tv
+	104.27.146.120 	  ekranka.tv
+	95.213.11.113 	 vk.com
+	173.194.32.151    google.ru
+	5.101.152.55 	 xn--j1al4b.xn--p1ai
+	5.101.152.55 	  rcedistant.ru
+	188.120.248.170  kiskav.8bb.ru
+	176.31.102.125    jeck.ru
+	5.101.152.9 	 istio.com
+	141.8.192.108 	  www.puzzleweb.ru
+	141.8.192.108 	 puzzleweb.ru
+	62.113.219.37 	  convertfileonline.com
+	195.239.16.17    www.nigma.ru
+	209.190.33.194    cooltext.com
+	109.120.169.82 	 www.toramp.com
+	109.120.169.82 	  toramp.com
+	94.100.180.200 	 mail.ru
+	212.24.42.230 	  www.gismeteo.ru
+	213.189.196.82 	 www.phpsql.ru
+	176.99.7.108 	  easyelectronics.ru
+	89.253.234.68 	 www.delphisources.ru
+	104.20.81.84 	  www.searchengines.ru
+	174.129.207.133  traditio-ru.org
+	185.61.149.220 	  tfile.me
+
+	91.218.38.132 bt.rutor.org
+	95.143.192.249 d.rutor.org
+	37.220.6.168 s.rutor.org
+
+	195.216.243.130 	wintorrent.ru
+	186.2.166.48 		 www.torrentino.com
+	5.35.170.5 		asset1.torrentino.com
+	186.2.166.49		 www.torrentino.ru
+	5.35.170.11 		dl.torrentino.net
+	
+	88.212.206.11 		soft.softodrom.ru
+	144.76.80.157 		 freesoft.ru
+	144.76.39.250 		www.softportal.com
+	195.216.243.232 	 rusprogram.3dn.ru
+	193.138.233.120 	www.freeware.ru
+	37.230.155.34		 www.chipdip.ru
+	91.233.230.48 		www.nix.ru
+	91.233.230.48		 ryazan.nix.ru
+	176.9.92.130 		photoshop-master.ru
+	
+	5.255.255.55 		 yandex.ru
+	77.88.21.189 		maps.yandex.ru
+	213.180.193.3 		 ya.ru
+	213.180.204.22 		market.yandex.ru
+	213.180.204.12 		 news.yandex.ru
+	213.180.204.193 	translate.yandex.ru
+	93.158.134.154 		 tv.yandex.ru
+	213.180.204.186 	music.yandex.ru
+	87.250.250.85 		 time.yandex.ru
+	93.158.134.25 		mail.yandex.ru
+	185.71.78.14 		 money.yandex.ru
+	213.180.193.50 		disk.yandex.ru
+
+	74.125.136.84 		 accounts.google.com
+	173.194.122.215 	translate.google.ru
+	
+	5.63.150.180 		ru.savefrom.net
+	193.109.246.63 		 www.elektrikii.ru
+	82.94.226.104 		www.blender.org
+	91.198.174.192 		 ru.wikipedia.org
+	8.8.178.110 		www.freebsd.org
+	5.153.231.4 		 www.debian.org
+	5.9.147.41 		www.mintlinux.ru
+	213.175.215.218 	 www.linuxmint.com
+	91.189.89.103 		www.ubuntu.com
+	213.108.248.249 	 ubuntu.ru
+	87.118.96.127 		linuxtorrent.ru
+	
+	185.48.56.24 		 filmix.net
+	195.216.243.26 		www.galileo-online.ru
+	90.189.192.216 		 video.sibnet.ru
+	88.212.204.164 		tv3.ru
+	193.109.246.86 		 lostfilmonline.ru
+	193.109.246.71 		hd-720.com
+	176.74.218.26 		 hd-720.ucoz.ru
+	31.7.60.222 		baskino.club
+	188.120.242.53		 kinomixs.ru
+	87.250.251.105 		www.kinopoisk.ru
+	92.63.88.73 		 tfilm.me
+	185.48.56.24 		filmix.net
+	185.48.56.41 		 filin.tv
+	193.109.246.46 		www.video-serial.ru
+	
+	195.135.235.218 	 podpiski.megafon.ru
+	85.26.148.161 		rzn.megafon.ru
+	85.26.148.161 		 lk.megafon.ru
+	194.54.14.131 		online.sberbank.ru
+	
+	90.156.201.46 		 paradive.ru
+	46.4.105.237 		www.diablo1.ru
+	178.132.204.75 		 eku.ru
+	94.229.72.115 		mirknig.mobi
+	217.23.4.68 		 mirknig.com
+	104.27.134.247 		lib.rus.ec
+	85.25.200.179 		 royallib.com
+	37.139.80.78 		fanread.ru
+	46.19.141.40 		 fantasy-worlds.org
+	46.17.46.48 		www.kodges.ru
+	144.76.202.184 		 blender3d.com.ua
+	5.101.153.37 		just-networks.ru
+	212.85.158.4 		 blender-archi.tuxfamily.org
+	89.223.41.149 		b3d.mezon.ru
+	81.176.66.171 		 samlib.ru
+	
+	185.12.31.8 		my.avon.ru
+	91.216.147.51 		 bonus.ssl.mts.ru
+	194.54.148.102 		login.mts.ru
+	66.211.181.51 		 www.ebay.ru
+	91.239.53.200 		megogo.net
+	81.19.93.6 		 www.rambler.ru
+	88.221.132.190 		ru.aliexpress.com
+	194.54.14.141 		 node1.online.sberbank.ru
+	185.12.31.10 		www.avon.ru
+	62.76.166.110 		 obrnadzor.gov.ru
+	62.76.166.110 		www.obrnadzor.gov.ru
+	91.232.230.50 		 qiwi.com
+	194.190.12.47 		www.rshb.ru
+	217.20.147.94 		 ok.ru
+	87.226.162.53 		ryazan.rt.ru
+	90.150.8.60 		 lk.rt.ru
+	193.109.246.128 	yablonevo.ucoz.net
+	188.120.238.219 	 pedcampus.ru
+	78.47.124.254 		www.best-mos.ru
+	82.146.63.140 		 www.interflora.ru
+	217.23.128.205 		www.flos.ru
+	217.23.128.205 		 pt.flos.ru
+	93.191.13.42 		ncsemena.ru
+	89.188.113.171 		 gardenshop.ru
+	141.8.194.93 		sadovod.net
+	37.29.13.54 		 www.yves-rocher.ru
+	185.10.60.153 		iledebeaute.ru
+	80.93.56.100 		 www.meggymall.ru
+	88.198.121.74 		carbon-card.ru
+	193.232.37.12 		 pay.carbon-card.ru
+	83.143.194.46 		kykyryza.ru
+	194.85.126.16 		 mybank.oplata.kykyryza.ru
+	192.237.187.208 	shop.kukuruza.ru
+	104.40.181.232 		 ru.oriflame.com
+	62.128.10.167 		www.quelle.ru
+	94.124.192.164 		 www.letoile.ru
+	93.95.98.180 		www.letu.ru
+	213.33.212.170 		 www.laredoute.ru
+	188.93.209.52 		orion10.ru
+	95.213.162.252 		 www.beauty-shop.ru
+	92.242.41.195 		bonus.sozv.ru
+	194.190.152.70 		 www.svyaznoybank.ru
+	212.5.80.220 		sclub.ru
+	37.143.11.6 		 school-assistant.ru
+	195.184.78.94 		sad-i-ogorod.ru
+	188.120.224.216 	 cadogorod.ru
+	193.169.188.19		ogorodsadovod.com
+	80.247.32.208 		 russia.tv
+	95.211.30.33 		osglavnom.ru
+	81.177.156.117 		 www.1tv.ru
+	82.192.78.5 		pro-tv.net
+	194.0.219.91 		 www.takzdorovo.ru
+	83.222.15.173 		ryazan.tricolor.tv
+	178.208.83.28 		 jurnalik.ru
+	72.55.178.196 		72-72.ru
+	5.45.75.30 		 www.alleng.ru
+	79.174.70.191		www.rosebook.ru
+	193.105.240.42 		 books.tr200.org
+	31.184.197.79 		interstroy-news.ru
+	91.226.212.170 		 bookv.ru
+	185.72.144.123 		gexa.ru
+	144.76.19.135 		 ldacha.ru
+	92.242.39.57 		promo.love.sl
+	178.248.233.12 		 www.love-sl.ru
+	178.132.201.186 	nsportal.ru
+	46.30.40.96 		 www.tvoyamolodost.ru
+	5.101.152.96 		herbal-grass.com
+	78.46.52.15 		 www.davajpohudeem.com
+	213.239.211.74 		dohcolonoc.ru
+	81.177.6.8 		 womans-secret.ru
+	185.104.10.9 		clclcl.ru
+	
+	87.240.131.117 		 login.vk.com
+#
+#
+#
