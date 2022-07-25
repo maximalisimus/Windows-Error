@@ -1,0 +1,33 @@
+
+В редакторе локальной групповой политики (gpedit.msc)
+Раздел: Конфигурация компьютера - Административные шаблоны - Компоненты Windows - Антивирусная программа защитинка Windows
+
+Выключить антивирусную программу Защитник Windows - Включено
+Разрешить запуск службы защиты от вредоносных программ - Выключено
+Разрешить постоянную работу службы защиты от вредоносных программ - Выключено
+
+Подраздел: "Защита в реальном времени"
+Выключить защиту в реальном времени - Включено
+Проверять все загружаемые файлы и вложения - Выключено.
+
+В редакторе реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+Параметры DWORD32:
+DisableAntiSpyware = 1
+AlowFastServiceStartup = 0
+ServiceKeepAlive = 0
+
+Подраздел "Real-Time Protection"
+DisableIOAVProtection = 1
+DisableRealtimeMonitoring = 1
+
+Подраздел Spynet
+LocalSettingsOverrideSpynetReporting = 0
+SubmitSamplesConsent = 2
+
+Отключение службы защитника Windows:
+В реестра: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend - изменить параметр Start на 4.
+
+И не забыть перезагрузить компьютер в конце.
+
+
+
