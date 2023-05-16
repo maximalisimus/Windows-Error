@@ -1,0 +1,72 @@
+
+
+chromium --ignore-certificate-errors
+
+
+
+Archlinux/Arcolinux/Manjaro:
+sudo cp ./*.pem /etc/ssl/certs/
+sudo cp ./*.crt /etc/ca-certificates/trust-source/anchors/
+
+
+
+Debian/Ubuntu/Xubuntu/Mint:
+/usr/share/ca-certificates
+
+
+
+CentOS/Fedora:
+trust anchors:
+/etc/pki/ca-trust/source/anchors
+/usr/share/pki/ca-trust-source/anchors/
+/etc/pki/ca-trust/source/anchors/
+
+distrusted certificates:
+/usr/share/pki/ca-trust-source/blocklist/
+/etc/pki/ca-trust/source/blocklist/
+
+BEGIN TRUSTED:
+/usr/share/pki/ca-trust-source/
+/etc/pki/ca-trust/source/
+
+
+
+RedOS inheritance CentOS/Fedora:
+su -
+dnf install ca-certificates-ru
+
+
+
+Archlinux/Arcolinux/Manjaro:
+sudo update-ca-trust
+sudo trust extract-compat
+sudo update-ca-trust extract
+
+
+
+Debian/Ubuntu/Xubuntu/Mint:
+sudo apt-get install ca-certificates
+sudo update-ca-certificates
+sudo update-ca-trust
+sudo dpkg-reconfigure ca-certificates
+
+
+CentOS/Fedora:
+update-ca-trust
+trust
+
+
+
+Scripts convert cert.
+
+#!/bin/bash
+
+for cert_files in ./*.pem; do
+	certname=$(basename "${cert_files}" | sed 's/.pem//g')
+	openssl x509 -inform PEM -in "${certname}.pem" -out "${certname}.crt" # -outform PEM
+done
+
+
+
+
+

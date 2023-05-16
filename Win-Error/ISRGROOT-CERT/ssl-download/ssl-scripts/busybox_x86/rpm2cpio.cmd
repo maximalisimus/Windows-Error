@@ -1,0 +1,1 @@
+busybox rpm2cpio %* 

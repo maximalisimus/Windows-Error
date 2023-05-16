@@ -1,6 +1,0 @@
-
-Win + R
-certmgr.msc
-
-
-
