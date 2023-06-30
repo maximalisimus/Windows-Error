@@ -1,0 +1,4 @@
+
+HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control/Session Manager
+BootExecute REG_MULTI_SZ autocheck autochk *
+
