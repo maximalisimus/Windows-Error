@@ -1,0 +1,20 @@
+
+regedit
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print
+Ђ—оздатьї Ч Ђѕараметр DWORD (32 бита)ї
+RpcAuthnLevelPrivacyEnabled
+”становите значение 0 дл€ него.
+
+ѕроверьте, есть ли в реестре Windows раздел
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers
+и содержит ли он какие-либо значени€ или подразделы 
+(по умолчанию содержать не должен, при наличии Ч можно попробовать удалить, 
+но имеет смысл создать точку восстановлени€ системы перед этим). 
+“акже попробуйте создать в этом разделе подраздел с именем PointAndPrint, 
+а в нЄм Ч параметр RestrictDriverInstallationToAdministrators со значением 0 или использовать команду
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint" /v RestrictDriverInstallationToAdministrators /t REG_DWORD /d 0 /f
+
+cmd:
+wusa /uninstall /kb:5005565
+
+
