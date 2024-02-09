@@ -1,0 +1,34 @@
+
+
+https://www.youtube.com/watch?v=78x9MNUyqQw
+
+https://www.youtube.com/watch?v=zcUVoh1F6mA
+
+
+
+Win + R: gpedit.msc
+
+Конфигурация компьютера
+	Административные шаблоны
+		Принтеры
+			Настроить параметры подключения RPC: Включено
+				RPC через именованные каналы
+
+Win + R: regedit
+
+HKLM\SOFTWARE\POLICES\Microsoft\Windows NT\Printers\RPC
+Dword 32
+RpcOverTcp = 0
+RpcOverNamedPipes = 1
+RpcUserNamedPipeProtocol = 1
+
+
+
+
+
+
+
+
+
+
+

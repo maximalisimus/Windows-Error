@@ -1,0 +1,7 @@
+﻿
+Component Services - Службы компонентов
+
+Win+R: dcomcnfg
+или
+Win+R: dcomcnfg.exe
+
