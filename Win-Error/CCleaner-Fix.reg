@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_CURRENT_USER\Software\Piriform\CCleaner]
+
+"Language"="1049"
+
+"UpdateBackground"="0"
+
+"UpdateCheck"="0"
+
+"HelpImproveCCleaner"="0"
+
+"PrefsPrivacyShowOffers1stParty"="0"
+
+"PrefsPrivacyShowOffers3rdParty"="0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Piriform\CCleaner]
+
+"(Cfg)PC"="0"
+
+"(Cfg)PE"="0"
+
