@@ -1,0 +1,56 @@
+
+
+1) Flash Card - format FAT32
+2) 
+	[boot]
+	[efi]
+	[support]
+	autorun.inf
+	bootmgr
+	bootmgr.efi
+3) Grub4DOS -> Windows Boot Manager
+4) Bootice-x86 - MBR and PBR
+5) 
+	[WinDists]
+	|- [Win_7_x86]
+	|- [Win_7_x64]
+	|- [Win_8.1_x86]
+	|- [Win_8.1_x64]
+	|- [Win_10_x86]
+	|- [Win_10_x64]
+6) copy [sources] to [WinDists]
+7) Bootice-x86 -> BCD BIOS and BCD UEFI
+	<буква_флешки>:\WinDists\Win_10_x64\boot.wim
+	<буква_флешки>:\WinDists\Win_10_x64\boot.sdi
+
+dism /get-wimInfo /wimFile:<буква_флешки>:\WinDists\Win_10_x64\boot.wim
+
+Windows Setup -> Index 2
+
+mkdir C:\mnt
+dism /mount-wim /wimFile:<буква_флешки>:\WinDists\Win_10_x64\boot.wim /index:2 /mountDir:C:\mnt
+
+copy winpeshl.ini C:\mnt\Windows\System32\
+copy runsetup.cmd C:\mnt\Windows\System32\
+
+# <Litter-FlashCard>:\\<prefix-for-Distributive>_<version>_<arch>\setup.exe
+# (string for  %RamdiskSourceDrive%\%WinDistAfx%_%WinVerAfx%_%WinArchAfx%\setup.exe
+
+# D:\WinDists\Win_7_x86\setup.exe
+# D:\WinDists\Win_10_x64\setup.exe
+
+dism /unmount-wim /mountDir:C:\mnt /commit
+
+# ei.cfg - Example
+copy ei.cfg WinDists\Win_7_ia32\
+copy ei.cfg WinDists\Win_10_x64\
+
+
+
+
+
+
+
+
+
+
