@@ -251,7 +251,6 @@ powershell -Command Get-ScheduledTask "Windows Defender Scheduled Scan" | Disabl
 echo Windows Defender Verification >> log.txt
 powershell -Command Get-ScheduledTask "Windows Defender Verification" | Disable-ScheduledTask 2>nul
 
-
 echo start %SystemRoot%\UpdaterDisabler\UpdaterDisabler.exe -install >> log.txt
 start %SystemRoot%\UpdaterDisabler\UpdaterDisabler.exe -install 2>nul
 
