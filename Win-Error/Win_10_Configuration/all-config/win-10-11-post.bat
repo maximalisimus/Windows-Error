@@ -58,7 +58,7 @@ echo powershell -Command Get-ProcessMitigation -RegistryConfigFilePath Settings.
 echo improt Settings.xml >> log.txt
 powershell -Command Set-ProcessMitigation -PolicyFilePath Settings.xml 2>nul
 
-echo EnableLUA > log.txt
+echo EnableLUA >> log.txt
 reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f 2>nul
 echo EnableSecureUIAPaths >> log.txt
 reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableSecureUIAPaths /t REG_DWORD /d 1 /f 2>nul
