@@ -267,3 +267,4 @@ REM echo gpedit.msc is Setuped >> log.txt
 chcp 866
 
 pause
+
