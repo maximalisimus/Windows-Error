@@ -435,53 +435,8 @@ gpupdate /force
 echo gpupdate /force Error=%MYERROR%
 echo gpupdate /force Error=%MYERROR% >> log.txt
 
-powershell -Command "& {Set-MpPreference -DisableRealtimeMonitoring $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableRealtimeMonitoring Error=%MYERROR%
-echo DisableRealtimeMonitoring Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference -PUAProtection 0}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo PUAProtection Error=%MYERROR%
-echo PUAProtection Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableArchiveScanning $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableArchiveScanning Error=%MYERROR%
-echo DisableArchiveScanning Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableBehaviorMonitoring $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableBehaviorMonitoring Error=%MYERROR%
-echo DisableBehaviorMonitoring Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableBlockAtFirstSeen $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableBlockAtFirstSeen Error=%MYERROR%
-echo DisableBlockAtFirstSeen Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableIOAVProtection $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableIOAVProtection Error=%MYERROR%
-echo DisableIOAVProtection Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisablePrivacyMode $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisablePrivacyMode Error=%MYERROR%
-echo DisablePrivacyMode Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableScanningNetworkFiles}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableScanningNetworkFiles Error=%MYERROR%
-echo DisableScanningNetworkFiles Error=%MYERROR% >> log.txt
-
-powershell -Command "& {Set-MpPreference DisableScriptScanning $true}" 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo DisableScriptScanning Error=%MYERROR%
-echo DisableScriptScanning Error=%MYERROR% >> log.txt
-
-start Remove-OneDrive-Programs.bat
-start Remove-Select-Soft.bat
+::start Remove-OneDrive-Programs.bat
+::start Remove-Select-Soft.bat
 
 chcp 866
 

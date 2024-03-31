@@ -2,6 +2,12 @@
 chcp 65001
 @echo off
 
+REM Cortana
+powershell -Command "& {Get-AppxPackage *Microsoft.549981C3F5F10* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove Cortana AppxPackage Error=%MYERROR%
+echo Remove Cortana AppxPackage Error=%MYERROR% >> log.txt
+
 REM 3D Builder
 powershell -Command "& {Get-AppxPackage *3dbuilder* | Remove-AppxPackage}" 2>nul
 SET MYERROR=%ERRORLEVEL%
@@ -141,5 +147,59 @@ powershell -Command "& {Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage}"
 SET MYERROR=%ERRORLEVEL%
 echo Remove Paint 3D AppxPackage Error=%MYERROR%
 echo Remove Paint 3D AppxPackage Error=%MYERROR% >> log.txt
+
+REM Print 3D
+powershell -Command "& {Get-AppxPackage *Print3D* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove Print3D AppxPackage Error=%MYERROR%
+echo Remove Print3D AppxPackage Error=%MYERROR% >> log.txt
+
+REM Microsoft.OneConnect
+powershell -Command "& {Get-AppxPackage *Microsoft.OneConnect* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove Microsoft.OneConnect AppxPackage Error=%MYERROR%
+echo Remove Microsoft.OneConnect AppxPackage Error=%MYERROR% >> log.txt
+
+REM yandex
+powershell -Command "& {Get-AppxPackage *yandex* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove yandex AppxPackage Error=%MYERROR%
+echo Remove yandex AppxPackage Error=%MYERROR% >> log.txt
+
+REM WindowsFeedbackHub
+powershell -Command "& {Get-AppxPackage *WindowsFeedbackHub* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove WindowsFeedbackHub AppxPackage Error=%MYERROR%
+echo Remove WindowsFeedbackHub AppxPackage Error=%MYERROR% >> log.txt
+
+REM GetHelp
+powershell -Command "& {Get-AppxPackage *GetHelp* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove GetHelp AppxPackage Error=%MYERROR%
+echo Remove GetHelp AppxPackage Error=%MYERROR% >> log.txt
+
+REM Messaging
+powershell -Command "& {Get-AppxPackage *Messaging* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove Messaging AppxPackage Error=%MYERROR%
+echo Remove Messaging AppxPackage Error=%MYERROR% >> log.txt
+
+REM MixedReality.Portal
+powershell -Command "& {Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove MixedReality.Portal AppxPackage Error=%MYERROR%
+echo Remove MixedReality.Portal AppxPackage Error=%MYERROR% >> log.txt
+
+REM ScreenSketch
+powershell -Command "& {Get-AppxPackage *ScreenSketch* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove ScreenSketch AppxPackage Error=%MYERROR%
+echo Remove ScreenSketch AppxPackage Error=%MYERROR% >> log.txt
+
+REM MicrosoftStickyNotes
+powershell -Command "& {Get-AppxPackage *MicrosoftStickyNotes* | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove MicrosoftStickyNotes AppxPackage Error=%MYERROR%
+echo Remove MicrosoftStickyNotes AppxPackage Error=%MYERROR% >> log.txt
 
 chcp 866

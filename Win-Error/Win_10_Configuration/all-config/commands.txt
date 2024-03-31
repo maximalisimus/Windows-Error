@@ -24,6 +24,23 @@
 
 
 
+REM 
+powershell -Command "& {Get-AppxPackage ** | Remove-AppxPackage}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo Remove  AppxPackage Error=%MYERROR%
+echo Remove  AppxPackage Error=%MYERROR% >> log.txt
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

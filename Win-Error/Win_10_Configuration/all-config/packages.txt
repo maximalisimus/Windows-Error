@@ -26,3 +26,221 @@ OneNote	Get-AppxPackage *onenote* | Remove-AppxPackage
 Погода	Get-AppxPackage *bingweather* | Remove-AppxPackage
 Xbox	Get-AppxPackage *xboxapp* | Remove-AppxPackage
 
+
+
+
+
+Удалить приложение Тарифные планы
+Get-AppxPackage *Microsoft.OneConnect* | Remove-AppxPackage
+
+Удалить приложение Яндекс Музыка
+Get-AppxPackage *yandex* | Remove-AppxPackage
+
+Удалить приложение Центр отзывов
+Get-AppxPackage *WindowsFeedbackHub* | Remove-AppxPackage
+
+Удалить приложение Техническая поддержка
+Get-AppxPackage *GetHelp* | Remove-AppxPackage
+
+Удалить приложение Сообщения
+Get-AppxPackage *Messaging* | Remove-AppxPackage
+
+Удалить приложение Меню игры
+Get-AppxPackage *XboxGamingOverlay* | Remove-AppxPackage
+
+Удалить приложение Камера
+Get-AppxPackage *WindowsCamera* | Remove-AppxPackage
+
+Удалить приложение Карты
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+
+Удалить приложение Портал смешанной реальности
+Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage
+
+Удалить приложение Набросок на фрагменте экрана
+Get-AppxPackage *ScreenSketch* | Remove-AppxPackage
+
+#Удалить приложение Microsoft Solitaire Collection
+Get-AppxPackage -allusers *MicrosoftSolitaireCollection* | Remove-AppxPackage
+
+#Удалить приложение Office
+Get-AppxPackage -allusers *MicrosoftOfficeHub* | Remove-AppxPackage
+
+#Удалить приложение Office OneNote
+Get-AppxPackage -allusers *Office.OneNote* | Remove-AppxPackage
+
+#Удалить приложение Paint 3D
+Get-AppxPackage -allusers *MSPaint* | Remove-AppxPackage
+
+#Удалить приложение Print 3D
+Get-AppxPackage -allusers *Print3D* | Remove-AppxPackage
+
+#Удалить приложение Skype
+Get-AppxPackage -allusers *SkypeApp* | Remove-AppxPackage
+
+#Удалить приложение XBox
+Get-AppxPackage -allusers *XboxApp* | Remove-AppxPackage
+
+#Удалить приложение Будильник и часы
+Get-AppxPackage -allusers *windowsalarms* | Remove-AppxPackage
+
+#Удалить приложение Ваш телефон
+Get-AppxPackage -allusers YourPhone* | Remove-AppxPackage
+
+#Удалить приложение Записки
+Get-AppxPackage -allusers *MicrosoftStickyNotes* | Remove-AppxPackage
+
+#Удалить приложение Запись голоса
+Get-AppxPackage -allusers *WindowsSoundRecorder* | Remove-AppxPackage
+
+#Удалить приложение Люди
+Get-AppxPackage -allusers *Microsoft.People* | Remove-AppxPackage
+
+#Удалить приложение Камера
+Get-AppxPackage -allusers *WindowsCamera* | Remove-AppxPackage
+
+#Удалить приложение Карты
+Get-AppxPackage -allusers *windowsmaps* | Remove-AppxPackage
+
+#Удалить приложение Кино и видео
+Get-AppxPackage -allusers *ZuneVideo* | Remove-AppxPackage
+
+#Удалить приложение Меню игры
+Get-AppxPackage -allusers *XboxGamingOverlay* | Remove-AppxPackage
+
+#Удалить приложение Музыка Groove
+Get-AppxPackage -allusers *ZuneMusic* | Remove-AppxPackage
+
+#Удалить приложение Набросок на фрагменте экрана
+Get-AppxPackage -allusers *ScreenSketch* | Remove-AppxPackage
+
+#Удалить приложение Погода
+Get-AppxPackage -allusers *bingweather* | Remove-AppxPackage
+
+#Удалить приложение Портал смешанной реальности
+Get-AppxPackage -allusers *MixedReality.Portal* | Remove-AppxPackage
+
+#Удалить приложение Почта
+Get-AppxPackage -allusers *windowscommunicationsapps* | Remove-AppxPackage
+
+#Удалить приложение Советы
+Get-AppxPackage -allusers *GetStarted* | Remove-AppxPackage
+
+#Удалить приложение Сообщения
+Get-AppxPackage -allusers *Messaging* | Remove-AppxPackage
+
+#Удалить приложение Тарифные планы
+Get-AppxPackage -allusers *Microsoft.OneConnect* | Remove-AppxPackage
+
+#Удалить приложение Техническая поддержка
+Get-AppxPackage -allusers *GetHelp* | Remove-AppxPackage
+
+#Удалить приложение Центр отзывов
+Get-AppxPackage -allusers *WindowsFeedbackHub* | Remove-AppxPackage
+
+#Удалить приложение Яндекс Музыка
+Get-AppxPackage -allusers *yandex* | Remove-AppxPackage
+
+#Так же можно удалить приложение Магазин (Store), НО в таком случае вы не сможете устанавливать другие приложения из Магазина Windows, так что стоит хорошенько подумать, прежде чем это делать.
+
+#Get-AppxPackage *windowsstore* | Remove-AppxPackage
+
+#Спорт :
+Get-AppxPackage -allusers *bingsports* | Remove-AppxPackage
+
+#Фото
+Get-AppxPackage -allusers *photos* | Remove-AppxPackage
+
+#MSN Фининсы :
+Get-AppxPackage -allusers *bingfinance* | Remove-AppxPackage
+
+#3D Builder:
+Get-AppxPackage -allusers *3dbuilder* | Remove-AppxPackage
+
+#Cortana
+Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
+
+
+
+
+3D Builder
+Get-AppxPackage *3dbuilder* | Remove-AppxPackage
+
+Часы и будильник
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+
+Калькулятор
+Get-AppxPackage *windowscalculator* | Remove-AppxPackage
+
+Календарь и почта
+Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+
+Камера
+Get-AppxPackage *windowscamera* | Remove-AppxPackage
+
+Office
+Get-AppxPackage *officehub* | Remove-AppxPackage
+
+Skype
+Get-AppxPackage *skypeapp* | Remove-AppxPackage
+
+Начало работы
+Get-AppxPackage *getstarted* | Remove-AppxPackage
+
+Groove Music
+Get-AppxPackage *zunemusic* | Remove-AppxPackage
+
+Карты
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+
+Microsoft Solitaire Collection
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+
+MSN Финансы
+Get-AppxPackage *bingfinance* | Remove-AppxPackage
+
+Кино и ТВ
+Get-AppxPackage *zunevideo* | Remove-AppxPackage
+
+Новости
+Get-AppxPackage *bingnews* | Remove-AppxPackage
+
+OneNote
+Get-AppxPackage *onenote* | Remove-AppxPackage
+
+Люди
+Get-AppxPackage *people* | Remove-AppxPackage
+
+Диспетчер телефонов
+Get-AppxPackage *windowsphone* | Remove-AppxPackage
+
+Фотографии
+Get-AppxPackage *photos* | Remove-AppxPackage
+
+Магазин Windows
+Get-AppxPackage *windowsstore* | Remove-AppxPackage
+
+Спорт
+Get-AppxPackage *bingsports* | Remove-AppxPackage
+
+Запись голоса
+Get-AppxPackage *soundrecorder* | Remove-AppxPackage
+
+Погода
+Get-AppxPackage *bingweather* | Remove-AppxPackage
+
+Xbox
+Get-AppxPackage *xboxapp* | Remove-AppxPackage
+
+
+
+
+
+
+
+
+
+
+
+
+
