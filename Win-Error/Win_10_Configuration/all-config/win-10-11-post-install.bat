@@ -128,6 +128,16 @@ SET MYERROR=%ERRORLEVEL%
 echo EnableLUA
 echo EnableLUA >> log.txt
 
+sc config seclogon start=auto 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo sc config seclogon start=auto Error=%MYERROR%
+echo sc config seclogon start=auto Error=%MYERROR% >> log.txt
+
+sc start seclogon 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo sc start seclogon Error=%MYERROR%
+echo sc start seclogon Error=%MYERROR% >> log.txt
+
 reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableSecureUIAPaths /t REG_DWORD /d 1 /f 2>nul
 SET MYERROR=%ERRORLEVEL%
 echo EnableSecureUIAPaths Error=%MYERROR%

@@ -2,235 +2,91 @@
 
 https://lumpics.ru/what-applications-can-be-removed-in-windows-10/
 
-3D Builder	Get-AppxPackage *3dbuilder* | Remove-AppxPackage
-Часы и будильник	Get-AppxPackage *windowsalarms* | Remove-AppxPackage
-Калькулятор	Get-AppxPackage *windowscalculator* | Remove-AppxPackage
-Календарь и почта	Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
-Камера	Get-AppxPackage *windowscamera* | Remove-AppxPackage
-Office	Get-AppxPackage *officehub* | Remove-AppxPackage
-Skype	Get-AppxPackage *skypeapp* | Remove-AppxPackage
-Начало работы	Get-AppxPackage *getstarted* | Remove-AppxPackage
-Groove Music	Get-AppxPackage *zunemusic* | Remove-AppxPackage
-Карты	Get-AppxPackage *windowsmaps* | Remove-AppxPackage
-Microsoft Solitaire Collection	Get-AppxPackage *solitairecollection* | Remove-AppxPackage
-MSN Финансы	Get-AppxPackage *bingfinance* | Remove-AppxPackage
-Кино и ТВ	Get-AppxPackage *zunevideo* | Remove-AppxPackage
-Новости	Get-AppxPackage *bingnews* | Remove-AppxPackage
-OneNote	Get-AppxPackage *onenote* | Remove-AppxPackage
-Люди	Get-AppxPackage *people* | Remove-AppxPackage
-Диспетчер телефонов	Get-AppxPackage *windowsphone* | Remove-AppxPackage
-Фотографии	Get-AppxPackage *photos* | Remove-AppxPackage
-Магазин Windows	Get-AppxPackage *windowsstore* | Remove-AppxPackage
-Спорт	Get-AppxPackage *bingsports* | Remove-AppxPackage
-Запись голоса	Get-AppxPackage *soundrecorder* | Remove-AppxPackage
-Погода	Get-AppxPackage *bingweather* | Remove-AppxPackage
-Xbox	Get-AppxPackage *xboxapp* | Remove-AppxPackage
-
-
-
-
-
-Удалить приложение Тарифные планы
-Get-AppxPackage *Microsoft.OneConnect* | Remove-AppxPackage
-
-Удалить приложение Яндекс Музыка
-Get-AppxPackage *yandex* | Remove-AppxPackage
-
-Удалить приложение Центр отзывов
-Get-AppxPackage *WindowsFeedbackHub* | Remove-AppxPackage
-
-Удалить приложение Техническая поддержка
-Get-AppxPackage *GetHelp* | Remove-AppxPackage
-
-Удалить приложение Сообщения
-Get-AppxPackage *Messaging* | Remove-AppxPackage
-
-Удалить приложение Меню игры
-Get-AppxPackage *XboxGamingOverlay* | Remove-AppxPackage
-
-Удалить приложение Камера
-Get-AppxPackage *WindowsCamera* | Remove-AppxPackage
-
-Удалить приложение Карты
-Get-AppxPackage *windowsmaps* | Remove-AppxPackage
-
-Удалить приложение Портал смешанной реальности
-Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage
-
-Удалить приложение Набросок на фрагменте экрана
-Get-AppxPackage *ScreenSketch* | Remove-AppxPackage
-
-#Удалить приложение Microsoft Solitaire Collection
-Get-AppxPackage -allusers *MicrosoftSolitaireCollection* | Remove-AppxPackage
-
-#Удалить приложение Office
-Get-AppxPackage -allusers *MicrosoftOfficeHub* | Remove-AppxPackage
-
-#Удалить приложение Office OneNote
-Get-AppxPackage -allusers *Office.OneNote* | Remove-AppxPackage
-
-#Удалить приложение Paint 3D
-Get-AppxPackage -allusers *MSPaint* | Remove-AppxPackage
-
-#Удалить приложение Print 3D
-Get-AppxPackage -allusers *Print3D* | Remove-AppxPackage
-
-#Удалить приложение Skype
-Get-AppxPackage -allusers *SkypeApp* | Remove-AppxPackage
-
-#Удалить приложение XBox
-Get-AppxPackage -allusers *XboxApp* | Remove-AppxPackage
-
-#Удалить приложение Будильник и часы
-Get-AppxPackage -allusers *windowsalarms* | Remove-AppxPackage
-
-#Удалить приложение Ваш телефон
-Get-AppxPackage -allusers YourPhone* | Remove-AppxPackage
-
-#Удалить приложение Записки
-Get-AppxPackage -allusers *MicrosoftStickyNotes* | Remove-AppxPackage
-
-#Удалить приложение Запись голоса
-Get-AppxPackage -allusers *WindowsSoundRecorder* | Remove-AppxPackage
-
-#Удалить приложение Люди
-Get-AppxPackage -allusers *Microsoft.People* | Remove-AppxPackage
-
-#Удалить приложение Камера
-Get-AppxPackage -allusers *WindowsCamera* | Remove-AppxPackage
-
-#Удалить приложение Карты
-Get-AppxPackage -allusers *windowsmaps* | Remove-AppxPackage
-
-#Удалить приложение Кино и видео
-Get-AppxPackage -allusers *ZuneVideo* | Remove-AppxPackage
-
-#Удалить приложение Меню игры
-Get-AppxPackage -allusers *XboxGamingOverlay* | Remove-AppxPackage
-
-#Удалить приложение Музыка Groove
-Get-AppxPackage -allusers *ZuneMusic* | Remove-AppxPackage
-
-#Удалить приложение Набросок на фрагменте экрана
-Get-AppxPackage -allusers *ScreenSketch* | Remove-AppxPackage
-
-#Удалить приложение Погода
-Get-AppxPackage -allusers *bingweather* | Remove-AppxPackage
-
-#Удалить приложение Портал смешанной реальности
-Get-AppxPackage -allusers *MixedReality.Portal* | Remove-AppxPackage
-
-#Удалить приложение Почта
-Get-AppxPackage -allusers *windowscommunicationsapps* | Remove-AppxPackage
-
-#Удалить приложение Советы
-Get-AppxPackage -allusers *GetStarted* | Remove-AppxPackage
-
-#Удалить приложение Сообщения
-Get-AppxPackage -allusers *Messaging* | Remove-AppxPackage
-
-#Удалить приложение Тарифные планы
-Get-AppxPackage -allusers *Microsoft.OneConnect* | Remove-AppxPackage
-
-#Удалить приложение Техническая поддержка
-Get-AppxPackage -allusers *GetHelp* | Remove-AppxPackage
-
-#Удалить приложение Центр отзывов
-Get-AppxPackage -allusers *WindowsFeedbackHub* | Remove-AppxPackage
-
-#Удалить приложение Яндекс Музыка
-Get-AppxPackage -allusers *yandex* | Remove-AppxPackage
-
-#Так же можно удалить приложение Магазин (Store), НО в таком случае вы не сможете устанавливать другие приложения из Магазина Windows, так что стоит хорошенько подумать, прежде чем это делать.
-
-#Get-AppxPackage *windowsstore* | Remove-AppxPackage
-
-#Спорт :
-Get-AppxPackage -allusers *bingsports* | Remove-AppxPackage
-
-#Фото
-Get-AppxPackage -allusers *photos* | Remove-AppxPackage
-
-#MSN Фининсы :
-Get-AppxPackage -allusers *bingfinance* | Remove-AppxPackage
-
-#3D Builder:
-Get-AppxPackage -allusers *3dbuilder* | Remove-AppxPackage
-
-#Cortana
-Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
-
-
-
-
-3D Builder
-Get-AppxPackage *3dbuilder* | Remove-AppxPackage
-
-Часы и будильник
-Get-AppxPackage *windowsalarms* | Remove-AppxPackage
-
-Калькулятор
-Get-AppxPackage *windowscalculator* | Remove-AppxPackage
-
-Календарь и почта
-Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
-
-Камера
-Get-AppxPackage *windowscamera* | Remove-AppxPackage
-
-Office
-Get-AppxPackage *officehub* | Remove-AppxPackage
-
-Skype
-Get-AppxPackage *skypeapp* | Remove-AppxPackage
-
-Начало работы
-Get-AppxPackage *getstarted* | Remove-AppxPackage
-
-Groove Music
-Get-AppxPackage *zunemusic* | Remove-AppxPackage
-
-Карты
-Get-AppxPackage *windowsmaps* | Remove-AppxPackage
-
-Microsoft Solitaire Collection
-Get-AppxPackage *solitairecollection* | Remove-AppxPackage
-
-MSN Финансы
-Get-AppxPackage *bingfinance* | Remove-AppxPackage
-
-Кино и ТВ
-Get-AppxPackage *zunevideo* | Remove-AppxPackage
-
-Новости
-Get-AppxPackage *bingnews* | Remove-AppxPackage
-
-OneNote
-Get-AppxPackage *onenote* | Remove-AppxPackage
-
-Люди
-Get-AppxPackage *people* | Remove-AppxPackage
-
-Диспетчер телефонов
-Get-AppxPackage *windowsphone* | Remove-AppxPackage
-
-Фотографии
-Get-AppxPackage *photos* | Remove-AppxPackage
-
-Магазин Windows
-Get-AppxPackage *windowsstore* | Remove-AppxPackage
-
-Спорт
-Get-AppxPackage *bingsports* | Remove-AppxPackage
-
-Запись голоса
-Get-AppxPackage *soundrecorder* | Remove-AppxPackage
-
-Погода
-Get-AppxPackage *bingweather* | Remove-AppxPackage
-
-Xbox
-Get-AppxPackage *xboxapp* | Remove-AppxPackage
+3D Builder	powershell -Command "& {Get-AppxPackage *3dbuilder* | Remove-AppxPackage}" 2>nul
+Cortana	powershell -Command "& {Get-AppxPackage *Microsoft.549981C3F5F10* | Remove-AppxPackage}" 2>nul
+Groove Music	powershell -Command "& {Get-AppxPackage *zunemusic* | Remove-AppxPackage}" 2>nul
+Microsoft Solitaire Collection	powershell -Command "& {Get-AppxPackage *solitairecollection* | Remove-AppxPackage}" 2>nul
+Microsoft Solitaire Collection	powershell -Command "& {Get-AppxPackage *MicrosoftSolitaireCollection* | Remove-AppxPackage}" 2>nul
+MS Office	powershell -Command "& {Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage}" 2>nul
+MSN Финансы	powershell -Command "& {Get-AppxPackage *bingfinance* | Remove-AppxPackage}" 2>nul
+Office	powershell -Command "& {Get-AppxPackage *officehub* | Remove-AppxPackage}" 2>nul
+Office OneNote	powershell -Command "& {Get-AppxPackage *Office.OneNote* | Remove-AppxPackage}" 2>nul
+OneNote	powershell -Command "& {Get-AppxPackage *onenote* | Remove-AppxPackage}" 2>nul
+Paint 3D	powershell -Command "& {Get-AppxPackage *MSPaint* | Remove-AppxPackage}" 2>nul
+Print 3D	powershell -Command "& {Get-AppxPackage *Print3D* | Remove-AppxPackage}" 2>nul
+Skype	powershell -Command "& {Get-AppxPackage *SkypeApp* | Remove-AppxPackage}" 2>nul
+Windows Store	powershell -Command "& {Get-AppxPackage *windowsstore* | Remove-AppxPackage}" 2>nul
+Windows Запись голоса	powershell -Command "& {Get-AppxPackage *WindowsSoundRecorder* | Remove-AppxPackage}" 2>nul
+Xbox	powershell -Command "& {Get-AppxPackage *xboxapp* | Remove-AppxPackage}" 2>nul
+XBox	powershell -Command "& {Get-AppxPackage *XboxApp* | Remove-AppxPackage}" 2>nul
+Будильник и часы	powershell -Command "& {Get-AppxPackage *windowsalarms* | Remove-AppxPackage}" 2>nul
+Ваш телефон	powershell -Command "& {Get-AppxPackage *windowsphone* | Remove-AppxPackage}" 2>nul
+Записки	powershell -Command "& {Get-AppxPackage *MicrosoftStickyNotes* | Remove-AppxPackage}" 2>nul
+Запись голоса	powershell -Command "& {Get-AppxPackage *soundrecorder* | Remove-AppxPackage}" 2>nul
+Календарь и почта	powershell -Command "& {Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage}" 2>nul
+Калькулятор	powershell -Command "& {Get-AppxPackage *windowscalculator* | Remove-AppxPackage}" 2>nul
+Камера	powershell -Command "& {Get-AppxPackage *windowscamera* | Remove-AppxPackage}" 2>nul
+Карты	powershell -Command "& {Get-AppxPackage *windowsmaps* | Remove-AppxPackage}" 2>nul
+Кино и ТВ	powershell -Command "& {Get-AppxPackage *zunevideo* | Remove-AppxPackage}" 2>nul
+Люди	powershell -Command "& {Get-AppxPackage *people* | Remove-AppxPackage}" 2>nul
+Меню игры	powershell -Command "& {Get-AppxPackage *XboxGamingOverlay* | Remove-AppxPackage}" 2>nul
+Набросок на фрагменте экрана	powershell -Command "& {Get-AppxPackage *ScreenSketch* | Remove-AppxPackage}" 2>nul
+Начало работы	powershell -Command "& {Get-AppxPackage *getstarted* | Remove-AppxPackage}" 2>nul
+Новости	powershell -Command "& {Get-AppxPackage *bingnews* | Remove-AppxPackage}" 2>nul
+Погода	powershell -Command "& {Get-AppxPackage *bingweather* | Remove-AppxPackage}" 2>nul
+Портал смешанной реальности	powershell -Command "& {Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage}" 2>nul
+Сообщения	powershell -Command "& {Get-AppxPackage *Messaging* | Remove-AppxPackage}" 2>nul
+Спорт	powershell -Command "& {Get-AppxPackage *bingsports* | Remove-AppxPackage}" 2>nul
+Тарифные планы	powershell -Command "& {Get-AppxPackage *Microsoft.OneConnect* | Remove-AppxPackage}" 2>nul
+Техническая поддержка	powershell -Command "& {Get-AppxPackage *GetHelp* | Remove-AppxPackage}" 2>nul
+Фотографии	powershell -Command "& {Get-AppxPackage *photos* | Remove-AppxPackage}" 2>nul
+Центр отзывов	powershell -Command "& {Get-AppxPackage *WindowsFeedbackHub* | Remove-AppxPackage}" 2>nul
+Яндекс Музыка	powershell -Command "& {Get-AppxPackage *yandex* | Remove-AppxPackage}" 2>nul
+
+Get-AppxPackage *ApplicationName* | Remove-AppxPackage
+powershell -Command "& {Get-AppxPackage ** | Remove-AppxPackage}" 2>nul
+
+
+
+
+
+
+
+lmhosts
+Модуль поддержки NetBIOS через TCP/IP
+Осуществляет поддержку NetBIOS через службу TCP/IP (NetBT) и разрешение имен NetBIOS для клиентов в сети, позволяя пользователям получать общий доступ к файлам, принтерам, а также подключаться к сети. Если данная служба остановлена, эти функции могут быть недоступны. Если данная служба отключена, все явно зависящие от нее службы запустить не удастся.
+
+LanmanServer
+Сервер
+Поддерживает общий доступ к файлам, принтерам и именованным каналам для данного компьютера через сетевое подключение. Если служба остановлена, такие функции не удастся выполнить. Если данная служба отключена, не удастся запустить любые явно зависимые службы.
+
+fdPHost
+Хост поставщика функции обнаружения
+В службе FDPHOST размещаются поставщики обнаружения сетевых ресурсов компонента обнаружения функций. Эти поставщики обнаружения функций обеспечивают службы обнаружения сетевых ресурсов для протоколов SSDP и WS-D. Остановка или отключение службы FDPHOST приведет к отключению обнаружения сетевых ресурсов для этих протоколов при использовании обнаружения функций. Если эта служба недоступна, сетевые службы, работа которых зависит от компонента обнаружения функций и данных протоколов обнаружения, не смогут находить сетевые устройства или ресурсы.
+
+FDResPub
+Публикация ресурсов обнаружения функции
+Публикует этот компьютер с его ресурсами, так что их можно будет обнаружить в сети.  Если эта служба остановлена, то сетевые ресурсы уже не будут публиковаться и не будут обнаруживаться другими компьютерами в сети.
+
+SSDPSRV
+Обнаружение SSDP
+Обнаруживает сетевые устройства и службы, использующие протокол обнаружения SSDP, такие как устройства UPnP. Также объявляет устройства и службы SSDP, работающие на локальном компьютере. Если эта служба остановлена, обнаружение устройств, использующих SSDP, не будет выполняться. Если данная служба отключена, все явно зависящие от нее службы запустить не удастся.
+
+upnphost
+Узел универсальных PNP-устройств
+Позволяет размещать устройства UPnP на этом компьютере. Если эта служба остановлена, все UPnP-устройства прекратят работу, и добавить дополнительные устройства будет невозможно. Если данная служба отключена, все явно зависящие от нее службы запустить не удастся.
+
+wuauserv
+Центр обновления Windows
+Включает обнаружение, скачивание и установку обновлений для Windows и других программ. Если эта служба отключена, пользователи данного компьютера не смогут использовать службу Центра обновления Windows либо возможности автоматического обновления и программы не смогут использовать API агента Центра обновления Windows (WUA).
+
+UsoSvc
+Служба оркестратора обновлений
+Управляет обновлениями Windows. Если она остановлена, ваши устройства не смогут загружать и устанавливать последние обновления.
+
+seclogon
+Вторичный вход в систему
+Позволяет запускать процессы от имени другого пользователя. Если эта служба остановлена, этот тип регистрации пользователя недоступен. Если эта служба отключена, то нельзя запустить другие службы, которые явно зависят от нее.
 
 
 
