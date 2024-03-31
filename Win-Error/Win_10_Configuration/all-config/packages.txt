@@ -1,0 +1,28 @@
+
+
+https://lumpics.ru/what-applications-can-be-removed-in-windows-10/
+
+3D Builder	Get-AppxPackage *3dbuilder* | Remove-AppxPackage
+Часы и будильник	Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+Калькулятор	Get-AppxPackage *windowscalculator* | Remove-AppxPackage
+Календарь и почта	Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+Камера	Get-AppxPackage *windowscamera* | Remove-AppxPackage
+Office	Get-AppxPackage *officehub* | Remove-AppxPackage
+Skype	Get-AppxPackage *skypeapp* | Remove-AppxPackage
+Начало работы	Get-AppxPackage *getstarted* | Remove-AppxPackage
+Groove Music	Get-AppxPackage *zunemusic* | Remove-AppxPackage
+Карты	Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+Microsoft Solitaire Collection	Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+MSN Финансы	Get-AppxPackage *bingfinance* | Remove-AppxPackage
+Кино и ТВ	Get-AppxPackage *zunevideo* | Remove-AppxPackage
+Новости	Get-AppxPackage *bingnews* | Remove-AppxPackage
+OneNote	Get-AppxPackage *onenote* | Remove-AppxPackage
+Люди	Get-AppxPackage *people* | Remove-AppxPackage
+Диспетчер телефонов	Get-AppxPackage *windowsphone* | Remove-AppxPackage
+Фотографии	Get-AppxPackage *photos* | Remove-AppxPackage
+Магазин Windows	Get-AppxPackage *windowsstore* | Remove-AppxPackage
+Спорт	Get-AppxPackage *bingsports* | Remove-AppxPackage
+Запись голоса	Get-AppxPackage *soundrecorder* | Remove-AppxPackage
+Погода	Get-AppxPackage *bingweather* | Remove-AppxPackage
+Xbox	Get-AppxPackage *xboxapp* | Remove-AppxPackage
+

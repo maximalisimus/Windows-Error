@@ -148,16 +148,6 @@ SET MYERROR=%ERRORLEVEL%
 echo  PromptOnSecureDesktop Error=%MYERROR%
 echo  PromptOnSecureDesktop Error=%MYERROR% >> log.txt
 
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\WindowsStore /v RemoveWindowsStore /t REG_DWORD /d 1 /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo RemoveWindowsStore Error=%MYERROR%
-echo RemoveWindowsStore Error=%MYERROR% >> log.txt
-
-reg ADD HKCU\Software\Policies\Microsoft\WindowsStore /v RemoveWindowsStore /t REG_DWORD /d 1 /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo RemoveWindowsStore Error=%MYERROR%
-echo RemoveWindowsStore Error=%MYERROR% >> log.txt
-
 reg ADD HKLM\SYSTEM\CurrentControlSet\Control\Print /v RpcAuthnLevelPrivacyEnabled /t REG_DWORD /d 0 /f 2>nul
 SET MYERROR=%ERRORLEVEL%
 echo RpcAuthnLevelPrivacyEnabled Error=%MYERROR%
@@ -269,6 +259,26 @@ reg ADD HKLM\SYSTEM\CurrentControlSet\Services\WinDefend /v Start /t REG_DWORD /
 SET MYERROR=%ERRORLEVEL%
 echo WinDefend Start 4 Error=%MYERROR%
 echo WinDefend Start 4 Error=%MYERROR% >> log.txt
+
+reg add "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Scan" /v ErrorAction /t REG_DWORD /d 0 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo ErrorAction Start 4 Error=%MYERROR%
+echo ErrorAction Start 4 Error=%MYERROR% >> log.txt
+
+reg add "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Scan" /v DisableEmailScanning /t REG_DWORD /d 1 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableEmailScanning Start 4 Error=%MYERROR%
+echo DisableEmailScanning Start 4 Error=%MYERROR% >> log.txt
+
+reg ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v ErrorAction /t REG_DWORD /d 0 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo ErrorAction Start 4 Error=%MYERROR%
+echo ErrorAction Start 4 Error=%MYERROR% >> log.txt
+
+reg ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v SpynetReporting /t REG_DWORD /d 0 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo SpynetReporting Start 4 Error=%MYERROR%
+echo SpynetReporting Start 4 Error=%MYERROR% >> log.txt
 
 reg ADD HKLM\SYSTEM\CurrentControlSet\Services\Sense /v Start /t REG_DWORD /d 4 /f 2>nul
 SET MYERROR=%ERRORLEVEL%
@@ -429,6 +439,46 @@ powershell -Command "& {Set-MpPreference -DisableRealtimeMonitoring $true}" 2>nu
 SET MYERROR=%ERRORLEVEL%
 echo DisableRealtimeMonitoring Error=%MYERROR%
 echo DisableRealtimeMonitoring Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference -PUAProtection 0}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo PUAProtection Error=%MYERROR%
+echo PUAProtection Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableArchiveScanning $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableArchiveScanning Error=%MYERROR%
+echo DisableArchiveScanning Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableBehaviorMonitoring $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableBehaviorMonitoring Error=%MYERROR%
+echo DisableBehaviorMonitoring Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableBlockAtFirstSeen $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableBlockAtFirstSeen Error=%MYERROR%
+echo DisableBlockAtFirstSeen Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableIOAVProtection $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableIOAVProtection Error=%MYERROR%
+echo DisableIOAVProtection Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisablePrivacyMode $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisablePrivacyMode Error=%MYERROR%
+echo DisablePrivacyMode Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableScanningNetworkFiles}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableScanningNetworkFiles Error=%MYERROR%
+echo DisableScanningNetworkFiles Error=%MYERROR% >> log.txt
+
+powershell -Command "& {Set-MpPreference DisableScriptScanning $true}" 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo DisableScriptScanning Error=%MYERROR%
+echo DisableScriptScanning Error=%MYERROR% >> log.txt
 
 start Remove-OneDrive-Programs.bat
 start Remove-Select-Soft.bat

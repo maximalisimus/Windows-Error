@@ -115,6 +115,14 @@ powershell -Command "& {Get-AppxPackage *windowsstore* | Remove-AppxPackage}" 2>
 SET MYERROR=%ERRORLEVEL%
 echo Remove windowsstore AppxPackage Error=%MYERROR% >> log.txt
 echo Remove windowsstore AppxPackage Error=%MYERROR%
+reg ADD HKLM\SOFTWARE\Policies\Microsoft\WindowsStore /v RemoveWindowsStore /t REG_DWORD /d 1 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo RemoveWindowsStore Error=%MYERROR%
+echo RemoveWindowsStore Error=%MYERROR% >> log.txt
+reg ADD HKCU\Software\Policies\Microsoft\WindowsStore /v RemoveWindowsStore /t REG_DWORD /d 1 /f 2>nul
+SET MYERROR=%ERRORLEVEL%
+echo RemoveWindowsStore Error=%MYERROR%
+echo RemoveWindowsStore Error=%MYERROR% >> log.txt
 
 REM Sport
 powershell -Command "& {Get-AppxPackage *bingsports* | Remove-AppxPackage}" 2>nul
