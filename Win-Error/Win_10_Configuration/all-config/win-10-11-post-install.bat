@@ -123,7 +123,9 @@ echo powershell -Command "& {Get-ProcessMitigation -RegistryConfigFilePath Setti
 echo improt Settings.xml Error=%MYERROR%
 echo improt Settings.xml Error=%MYERROR% >> log.txt
 
-reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f 2>nul
+reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f 2>nul
+echo reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f 2>nul >> log.txt
+echo reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f 2>nul >> log.txt
 SET MYERROR=%ERRORLEVEL%
 echo EnableLUA
 echo EnableLUA >> log.txt
