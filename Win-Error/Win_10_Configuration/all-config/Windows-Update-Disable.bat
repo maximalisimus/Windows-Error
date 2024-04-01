@@ -2,52 +2,24 @@
 chcp 65001
 @echo off
 
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v NoAutoUpdate  >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v NoAutoUpdate /t REG_DWORD /d 1 /f 2>nul
+sc config UsoSvc start=disabled 2>nul
 SET MYERROR=%ERRORLEVEL%
-echo disable WindowsUpdate NoAutoUpdate Error=%MYERROR%
-echo disable WindowsUpdate NoAutoUpdate Error=%MYERROR% >> log.txt
+echo disable UsoSvc Error=%MYERROR%
+echo disable UsoSvc Error=%MYERROR% >> log.txt
 
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v AUOptions  >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v AUOptions /t REG_DWORD /d 2 /f 2>nul
+sc stop UsoSvc 2>nul
 SET MYERROR=%ERRORLEVEL%
-echo AUOptions Error=%MYERROR%
-echo AUOptions Error=%MYERROR% >> log.txt
+echo stop UsoSvc Error=%MYERROR%
+echo stop UsoSvc Error=%MYERROR% >> log.txt
 
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v DoNotConnectToWindowsUpdateInternetLocations  >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v DoNotConnectToWindowsUpdateInternetLocations  /t REG_DWORD /d 1 /f 2>nul
+sc config wuauserv start=disabled 2>nul
 SET MYERROR=%ERRORLEVEL%
-echo DoNotConnectToWindowsUpdateInternetLocations Error=%MYERROR%
-echo DoNotConnectToWindowsUpdateInternetLocations Error=%MYERROR% >> log.txt
+echo disable wuauserv Error=%MYERROR%
+echo disable wuauserv Error=%MYERROR% >> log.txt
 
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v UpdateServiceUrlAlternate >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v UpdateServiceUrlAlternate /t reg_sz /d "server.wsus" /f 2>nul
+sc stop wuauserv 2>nul
 SET MYERROR=%ERRORLEVEL%
-echo UpdateServiceUrlAlternate server.wsus Error=%MYERROR%
-echo UpdateServiceUrlAlternate server.wsus Error=%MYERROR% >> log.txt
-
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v WUServer >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v WUServer /t reg_sz /d "server.wsus" /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo WUServer server.wsus Error=%MYERROR%
-echo WUServer server.wsus Error=%MYERROR% >> log.txt
-
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v WUStatusServer >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /v WUStatusServer /t reg_sz /d "server.wsus" /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo WUStatusServer server.wsus Error=%MYERROR%
-echo WUStatusServer server.wsus Error=%MYERROR% >> log.txt
-
-reg QUERY HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v UseWUServer >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU /v UseWUServer  /t REG_DWORD /d 1 /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo UseWUServer Error=%MYERROR%
-echo UseWUServer Error=%MYERROR% >> log.txt
-
-reg QUERY HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc /v Start >> Windows-Update-Reg-Backup.txt
-reg ADD HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc /v Start /t REG_DWORD /d 4 /f 2>nul
-SET MYERROR=%ERRORLEVEL%
-echo disable UsoSvc 4 Error=%MYERROR%
-echo disable UsoSvc 4 Error=%MYERROR% >> log.txt
+echo stop wuauserv Error=%MYERROR%
+echo stop wuauserv Error=%MYERROR% >> log.txt
 
 chcp 866
