@@ -333,16 +333,16 @@ echo CCleaner (Cfg)PE Error=%MYERROR%
 echo CCleaner (Cfg)PE Error=%MYERROR% >> log.txt
 
 (
-	echo 0.0.0.0 alpha-crap.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 analytics.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 ip-info.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 ipm-provider.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 license-api.ccleaner.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 license.piriform.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 ncc.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 ncc.avast.com.edgesuite.net >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 shepherd.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
-	echo 0.0.0.0 www.ccleaner.com >> %SystemRoot%\System32\drivers\etc\hosts Error=%MYERROR% >> log.txt
+	echo 0.0.0.0 alpha-crap.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 analytics.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 ip-info.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 ipm-provider.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 license-api.ccleaner.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 license.piriform.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 ncc.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 ncc.avast.com.edgesuite.net >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 shepherd.ff.avast.com >> %SystemRoot%\System32\drivers\etc\hosts
+	echo 0.0.0.0 www.ccleaner.com >> %SystemRoot%\System32\drivers\etc\hosts
 ) 2>nul
 SET MYERROR=%ERRORLEVEL%
 echo hosts config on CCleaner Error=%MYERROR%
