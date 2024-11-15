@@ -1,0 +1,4 @@
+D:\vbox\Telemetry-Win-10\example\event00.rbs Error= 
+D:\vbox\Telemetry-Win-10\example\event01.rbs Error= 
+D:\vbox\Telemetry-Win-10\example\event10.rbs Error= 
+D:\vbox\Telemetry-Win-10\example\event11.rbs Error= 
