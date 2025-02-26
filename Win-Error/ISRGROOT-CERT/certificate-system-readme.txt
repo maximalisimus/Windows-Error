@@ -3,7 +3,6 @@ Win + R
 certmgr.msc
 
 
-
 Cert:\CurrentUser\My
 Cert:\CurrentUser\Root
 Cert:\LocalMachine\My
@@ -16,5 +15,5 @@ CA — Промежуточные центры сертификации.
 AddressBook — Другие пользователи.
 TrustedPublisher — Доверенные издатели.
 Disallowed — Недоверенные сертификаты.
-
+AuthRoot — для сертификатов, используемых для аутентификации.
 
