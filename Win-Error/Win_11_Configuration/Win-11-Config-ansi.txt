@@ -1,0 +1,29 @@
+
+
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+DWORD (32-бита) Start_ShowClassicMode = 1
+
+Чтобы вернуть стандартное меню «Пуск»,
+нужно удалить параметр Start_ShowClassicMode или установить для него значение 0
+
+
+
+winget install --id valinet.ExplorerPatcher
+
+winget uninstall --id valinet.ExplorerPatcher
+
+https://github.com/valinet/ExplorerPatcher
+https://github.com/valinet/ExplorerPatcher.git
+https://github.com/valinet/ExplorerPatcher/releases
+
+
+
+
+winget install --id RamenSoftware.Windhawk
+
+winget install --id RamenSoftware.Windhawk
+
+
+
+
