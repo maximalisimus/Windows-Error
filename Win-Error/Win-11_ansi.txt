@@ -1,0 +1,114 @@
+
+ 
+https://dzen.ru/a/YtbntGqN5GH6fi4u
+ 
+https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md
+ 
+ 
+Готовим виртуальный диск для Qemu-KVM:
+qemu-img create -f qcow2 /mnt/virtual/Windows11/windows11.qcow2 50G
+Из пакета edk2-ovmf копируем образы UEFI и NVRAM:
+cp /usr/share/edk2/ovmf/OVMF_CODE.fd /mnt/virtual/Windows11
+cp /usr/share/edk2/ovmf/OVMF_VARS.fd /mnt/virtual/Windows11
+Запускаем виртуальную машину с образами Windows и драйверами virtio:
+sudo qemu-kvm \
+ 
+-run-with user=$USER \
+-machine q35 \
+-smbios type=1,manufacturer=Qemu,product=KVM,version=1 \
+-cpu qemu64 \
+-accel kvm \
+-smp cpus=4,sockets=1,cores=4 \
+-m 6G \
+-k en-us \
+-vga qxl \
+-display spice-app \
+-device virtio-net-pci,mac=52:54:00:00:00:01,netdev=lan \
+-netdev tap,id=lan,ifname=tap0,script=/etc/qemu-ifup,downscript=/etc/qemu-ifdown \
+-drive if=pflash,format=raw,readonly=on,file=/mnt/virtual/Windows11/OVMF_CODE.fd \
+-drive if=pflash,format=raw,file=/mnt/virtual/Windows11/OVMF_VARS.fd \
+-drive file=/mnt/virtual/Windows11/Windows11.qcow2,if=virtio,cache=writeback,media=disk \
+-drive file=/mnt/iso/Win11_Russian_x64.iso,media=cdrom \
+-drive file=/mnt/iso/virtio-win-0.1.217.iso,media=cdrom
+ 
+ 
+ 
+wmic logicaldisk get caption
+ 
+В Windows 11 нет драйвера дискового контроллера Virtio, поэтому необходимо его загрузить вручную.
+Поочерёдно смотрим содержимое дисков командой dir, определяем на каком диске находятся драйвера. В моём случае это оказался диск E:
+Загружаем драйвер дискового контроллера:
+ 
+drvload E:\amd64\w11\viostor.inf
+DrvLoad: Успешно загружен E:\amd64\w11\viostor.inf
+ 
+ 
+Создание разделов на диске для установки Windows 11
+Запускаем в командной строке программу diskpart.
+Получаем список дисков с помощью команды list disk.
+Программа diskpart
+Выбираем диск:
+select disk 0
+УДАЛЯЕМ ВСЕ ДАННЫЕ НА ДИСКЕ (команда подтверждения не запрашивает):
+clean
+Создаём на диске разметку GPT:
+convert gpt
+Создаём раздел ESP для загрузки на 256 МБ, назначаем ему свободную букву (U:) и форматируем в FAT32:
+create partition efi size=256
+assign letter=U
+format fs=fat label=ESP quick
+Создаём раздел Microsoft Reserved Partition объёмом 16 МБ:
+create partition msr size=16
+Создаём раздел для системы на всё оставшееся место, назначаем ему свободную букву (у меня свободна буква С:, у вас буква диска может быть другой) и форматируем в NTFS:
+create partition primary
+assign letter=C
+format fs=ntfs label=Windows11 quick
+Выходим из diskpart:
+exit
+ 
+Распаковка wim-образа
+Определяем букву диска, где находятся установочные файлы Windows 11. У меня это оказался диск D:
+ 
+Информация об образе
+Получаем информацию об установочном образе:
+dism /Get-WimInfo /WimFile:D:\sources\install.wim
+ 
+Запоминаем индекс нужной нам редакции Windows.
+Распаковка образа
+С помощью команды dism распаковываем образ на диск С: (у вас буква диска может быть другой).
+Dism /apply-image /imagefile:D:\sources\install.wim /index:4 /ApplyDir:C:\
+Параметры:
+/ApplyDir - каталог для распаковки образа
+/index - вариант редакции Windows
+/imagefile - путь к образу wim
+ 
+Проверяем содержимое диска, куда распаковали образ (у меня это диск C:)
+ 
+Добавления драйвера в Windows 11
+После выхода из режима восстановления система не загрузится, так как в ней нет драйверов для дискового контроллера, поскольку drvload загрузил драйвер только на время сеанса.
+Добавляем драйвер с помощью команды dism:
+dism /image:С:\ /add-driver /driver:e:\viostor\w11\amd64\viostor.inf
+Параметры:
+/driver - путь к драйверу
+/image - диск с распакованной Windows
+Установка загрузчика
+Выполняем установку файлов, необходимых для загрузки, на раздел ESP (я ранее назначил ему букву U:)
+bcdboot C:\Windows /s U: /f UEFI
+Выходим из командой строки. Выбираем продолжить или выключаем виртуальную машину.
+Мастер настройки Windows 11 потребует обязательного подключения к Интернет для завершения настройки. Если интернет отсутствует, то необходимо перезапустить настройку через команду oobe\bypassnro.
+ 
+Для этого при запуске экрана настроек нажмите клавиши Shift+F10 чтобы открыть командную строку и находясь в каталоге c:\windows\system32 введите команду:
+ 
+oobe\bypassnro
+Система перезагрузится, и после запуска настройки можно выбрать пункт "У меня нет Интернета".
+ 
+После завершения первоначальной настройки устанавливаем оставшиеся драйвера.
+ 
+Установка драйверов
+После установки драйверов выключаем машину, убираем из параметров запуска iso-образы и запускам снова.
+ 
+Установленная Windows 11
+На этом установка завершена.
+ 
+
+

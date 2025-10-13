@@ -1,0 +1,9 @@
+
+"%SystemDrive%\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="%CD%\Profile" --profile-directory="Home" --new-window "chrome://new-tab-page"
+ 
+"C:\Program Files (x86)\Google\Chrome\Application"
+ 
+ 
+
+
+
