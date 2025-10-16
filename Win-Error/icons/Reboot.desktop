@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/mint/program-files/shutdown-reboot.sh
+Type=Application
+Name=Reboot
+Terminal=false
+Icon=/home/mint/program-files/reboot-icon.png
+StartupNotify=false

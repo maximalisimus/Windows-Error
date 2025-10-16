@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Exec=/home/mint/program-files/shutdown-poweroff.sh
+Type=Application
+Name=Shutdown
+Terminal=false
+Icon=/home/mint/program-files/poweroff-icon.png
+StartupNotify=false
