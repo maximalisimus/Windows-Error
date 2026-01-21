@@ -1,0 +1,21 @@
+
+Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol-Client
+Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol-Client
+
+optionalfeatures.exe -> SMB 1.0/CIFS File Sharing Support Ц> SMB 1.0/CIFS Client.
+
+
+reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters /v AllowInsecureGuestAuth /t reg_dword /d 00000001 /f
+reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\ /f /v RequireSecuritySignature /t REG_DWORD /d 0
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation /f /v AllowInsecureGuestAuth /t REG_DWORD /d 1
+
+Win+R Ч appwiz.cpl
+
+sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
+
+Win+R на клавиатуре, введите secpol.msc
+
+ƒважды нажмите по параметру Ђ—етева€ безопасность: уровень проверки подлинности LAN Managerї 
+и на вкладке Ђѕараметр локальной безопасностиї выберите пункт Ђќтправл€ть LM и NTLM Ч использовать сеансовую безопасностьї.
+
+
