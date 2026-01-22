@@ -1,21 +1,35 @@
 
+Проверим какое значение в данный момент - Enabled или Disabled
 Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol-Client
+
+Включим этот параметр
 Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol-Client
 
+Теперь откроем дополнительные компоненты системы и найдем там SMB 1.0/CIFS, а внем включим Клиента, а лучше все включим.
 optionalfeatures.exe -> SMB 1.0/CIFS File Sharing Support –> SMB 1.0/CIFS Client.
+Win+R — appwiz.cpl если не открывается optionalfeatures.exe
 
+Обязательно добавить следующие параметры в реестр regedit
+HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters Тип DWORD32 Параметр AllowInsecureGuestAuth Изменить на 00000001
+HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters Тип DWORD32 Параметр RequireSecuritySignature Изменить на 0
+HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation Тип DWORD32 Параметр AllowInsecureGuestAuth Изменить на  1
 
 reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters /v AllowInsecureGuestAuth /t reg_dword /d 00000001 /f
 reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\ /f /v RequireSecuritySignature /t REG_DWORD /d 0
 reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation /f /v AllowInsecureGuestAuth /t REG_DWORD /d 1
 
-Win+R — appwiz.cpl
-
+Обязательно включить рабочую станцию тип просмотра и драйвер
 sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
 
+Затем изменить политику безопасности
 Win+R на клавиатуре, введите secpol.msc
-
+Локальные политики -> Параметры безопасности
 Дважды нажмите по параметру «Сетевая безопасность: уровень проверки подлинности LAN Manager» 
 и на вкладке «Параметр локальной безопасности» выберите пункт «Отправлять LM и NTLM — использовать сеансовую безопасность».
 
+А можно тоже самое сделать через реестр
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa Тип DWORD32 Параметр LmCompatibilityLevel Изменить на 1
+Создать параметр, если нет такого
+
+reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /v LmCompatibilityLevel /t REG_DWORD /d 1 /f
 
