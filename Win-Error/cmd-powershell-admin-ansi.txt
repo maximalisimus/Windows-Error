@@ -1,0 +1,16 @@
+
+powershell "start cmd -v runAs"
+ 
+powershell -Command "Start-Process cmd -Verb RunAs"
+ 
+powershell "start cmd -v runAs -WorkingDirectory 'C:\¬аш_путь'"
+ 
+powershell -Command "Start-Process cmd -Verb RunAs -WorkingDirectory 'C:\¬аш_путь'"
+ 
+powershell -Command "Start-Process cmd -Verb RunAs -WorkingDirectory '%CD%'"
+ 
+powershell -Command "Start-Process cmd -Verb RunAs -WorkingDirectory $PWD"
+ 
+powershell "start cmd -v runAs -WorkingDirectory $PWD"
+
+
